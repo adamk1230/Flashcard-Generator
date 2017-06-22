@@ -1,0 +1,25 @@
+{ "cards": 
+	[
+		{
+			"question": "This is question 1",
+			"cloze": "question"
+		}, 
+		{
+			"question": "This is question 2",
+			"cloze": "question"
+		},
+		{
+			"question": "This is question 3",
+			"cloze": "question"
+		},
+		{
+			"question": "This is question 4",
+			"cloze": "question"
+		},
+		{
+			"question": "This is question 5",
+			"cloze": "question"
+		}
+
+	] 
+}
