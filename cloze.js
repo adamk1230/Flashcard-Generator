@@ -10,8 +10,8 @@ var cards = [];
 var right = 0;
 var wrong = 0;
 
-
-fs.readFile("cloze.JSON", "utf8", function(error, data) {
+//Reads the cloze.json file, then pushes it through the BasicCard constructor, and then pushes the cards into the cards array.
+fs.readFile("cloze.json", "utf8", function(error, data) {
 			if (error) {
 				return console.log(error);
 			}
@@ -26,15 +26,11 @@ fs.readFile("cloze.JSON", "utf8", function(error, data) {
 
 			askCloze();
 
-			
-
 
 		});
 
 
-
-
-
+//function to write question to node app
 var askCloze = function(){
 	if (count < cards.length){
 		inquirer.prompt([

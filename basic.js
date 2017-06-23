@@ -26,15 +26,11 @@ fs.readFile("basic.json", "utf8", function(error, data) {
 
 			askBasic();
 
-			
-
 
 		});
 
 
-
-
-
+//function to write question to node app
 var askBasic = function(response){
 	if (count < cards.length){
 		inquirer.prompt([
