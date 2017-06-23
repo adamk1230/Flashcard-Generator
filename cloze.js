@@ -1,5 +1,5 @@
 var inquirer = require("inquirer");
-var BasicCard = require("./BasicCard.js");
+var ClozeCard = require("./ClozeCard.js");
 var fs = require("fs");
 
 
@@ -10,8 +10,8 @@ var cards = [];
 var right = 0;
 var wrong = 0;
 
-//Reads the basic.json file, then pushes it through the BasicCard constructor, and then pushes the cards into the cards array.
-fs.readFile("basic.json", "utf8", function(error, data) {
+
+fs.readFile("cloze.JSON", "utf8", function(error, data) {
 			if (error) {
 				return console.log(error);
 			}
@@ -20,11 +20,11 @@ fs.readFile("basic.json", "utf8", function(error, data) {
 			var card = [];
 
 			for (var i = 0; i < cardsArray.length; i++) {
-				card[i] = new BasicCard(cardsArray[i].question, cardsArray[i].answer);
+				card[i] = new ClozeCard(cardsArray[i].question, cardsArray[i].cloze);
 				cards.push(card[i])
 			}
 
-			askBasic();
+			askCloze();
 
 			
 
@@ -35,17 +35,17 @@ fs.readFile("basic.json", "utf8", function(error, data) {
 
 
 
-var askBasic = function(response){
+var askCloze = function(){
 	if (count < cards.length){
 		inquirer.prompt([
 		{
 			type: "input",
-			message: cards[count].front,
+			message: cards[count].partial,
 			name: "response"
 
 		}
 		]).then(function(answers) {
-			if(answers.response == cards[count].back){
+			if(answers.response == cards[count].cloze){
 			console.log("You got the question right!");
 			right++;
 			console.log("Correct: " + right);
@@ -53,13 +53,13 @@ var askBasic = function(response){
 		}
 			else{
 				console.log("You got the question wrong!");
-				console.log("The correct answer is " + cards[count].back);
+				console.log("The correct answer is " + cards[count].cloze);
 				wrong++;
 				console.log("Correct: " + right);
 				console.log("Incorrect: " + wrong);
 			}
 		count++;
-		askBasic();
+		askCloze();
 	});
 			
 

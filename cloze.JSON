@@ -1,0 +1,25 @@
+{ "cards": 
+	[
+		{
+			"question": "Javascript was created in the year of 1995.",
+			"cloze": "1995"
+		}, 
+		{
+			"question": "Eli Manning is the starting quarterback for the New York Giants.",
+			"cloze": "Eli Manning"
+		},
+		{
+			"question": "Blizzard is the video game developer that made Starcraft.",
+			"cloze": "Blizzard"
+		},
+		{
+			"question": "Ben McAdoo is the head coach of the New York Giants.",
+			"cloze": "Ben"
+		},
+		{
+			"question": "Bill Gates is the richest person in the world.",
+			"cloze": "Bill Gates"
+		}
+
+	] 
+}

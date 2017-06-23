@@ -1,0 +1,26 @@
+{ "cards": 
+	[
+		{
+			"question": "What year was Javascript created?",
+			"answer": "1995"
+		}, 
+		{
+			"question": "Who is the starting quarterback for the New York Giants?",
+			"answer": "Eli Manning"
+		},
+		{
+			"question": "What video game developer made Starcraft?",
+			"answer": "Blizzard"
+		},
+		{
+			"question": "Who is the head coach of the New York Giants?",
+			"answer": "Ben McAdoo"
+		},
+		{
+			"question": "Who is the richest person in the world?",
+			"answer": "Bill Gates"
+		}
+
+	] 
+}
+
